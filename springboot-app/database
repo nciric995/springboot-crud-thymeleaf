@@ -1,0 +1,26 @@
+DROP SCHEMA IF EXISTS `appdb`;
+
+CREATE SCHEMA `appdb`;
+
+use `appdb`;
+
+DROP TABLE IF EXISTS `radnik`;
+
+CREATE TABLE `radnik`(
+`id`  int(11) NOT NULL AUTO_INCREMENT,
+`ime` varchar(45) DEFAULT NULL,
+`prezime` varchar(45) DEFAULT NULL,
+`email` varchar(45) DEFAULT NULL,
+`broj_telefona` varchar(45) DEFAULT NULL,
+`adresa` varchar(45) DEFAULT NULL,
+`datum_rodjenja` date DEFAULT NULL,
+`sektor` varchar(45) DEFAULT NULL,
+`datum_zaposlenja` date DEFAULT NULL,
+
+PRIMARY KEY(`id`)
+)
+ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT INTO radnik(ime,prezime,email,broj_telefona,adresa,datum_rodjenja,sektor,datum_zaposlenja)
+VALUES ('Nikola','Ćirić','nikola@gmail.com','0605687802','Vojislava Vuckovica 7','1995-11-27','IT','2020-12-15'),
+VALUES ('Petar','Petrović','perica@yahoo.com','066232323','Sindjelicev Trg 1','1983-04-15','Marketing','2010-10-10');
